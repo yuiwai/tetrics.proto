@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+message Request {
+    string version = 1;
+    Tetrics tetrics = 2;
+}
+message Response {
+    repeated Action action = 1;
+}
+message Tetrics {
+    Field leftField = 1;
+    Field rightField = 2;
+    Field topField = 3;
+    Field bottomField = 4;
+    Field centerField = 5;
+}
+message Field {
+    repeated Row row = 1;
+}
+message Row {
+    repeated bool col = 1;
+}
+enum Action {
+    UNKNOWN = 0;
+    MOVE_LEFT = 1;
+    MOVE_RIGHT = 2;
+    MOVE_UP = 3;
+    MOVE_DOWN = 4;
+    ROTATE_LEFT = 5;
+    ROTATE_RIGHT = 6;
+    DROP_LEFT = 7;
+    DROP_RIGHT = 8;
+    DROP_TOP = 9;
+    DROP_BOTTOM = 10;
+}
