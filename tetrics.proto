@@ -8,11 +8,11 @@ message Response {
     repeated Action action = 1;
 }
 message Tetrics {
-    Field leftField = 1;
-    Field rightField = 2;
-    Field topField = 3;
-    Field bottomField = 4;
-    Field centerField = 5;
+    Field left_field = 1;
+    Field right_field = 2;
+    Field top_field = 3;
+    Field bottom_field = 4;
+    Field center_field = 5;
 }
 message Field {
     repeated Row row = 1;
